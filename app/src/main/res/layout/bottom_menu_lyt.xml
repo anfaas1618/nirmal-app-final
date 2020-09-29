@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytBottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/lythome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="OnClickBtn"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            app:srcCompat="@drawable/ic_home" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_home"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/p_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lytcategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="OnClickBtn"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/ic_category1" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_category"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/p_text_size" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lytfav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="OnClickBtn"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:srcCompat="@drawable/ic_favourite" />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_fav"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/p_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lytcart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="OnClickBtn"
+
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/bag"
+            android:tint="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title_cart"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/p_text_size" />
+    </LinearLayout>
+</LinearLayout>

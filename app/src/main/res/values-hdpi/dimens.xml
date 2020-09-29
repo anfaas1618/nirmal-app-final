@@ -1,0 +1,7 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="c_thumb_height">100dp</dimen>
+    <dimen name="c_thumb_width">90dp</dimen>
+    <dimen name="add_remove_size">24dp</dimen>
+    <dimen name="slider_height">170dp</dimen>
+</resources>

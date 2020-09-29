@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <include layout="@layout/toolbar_search_lyt" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favrecycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topLyt" />
+
+    <TextView
+        android:id="@+id/txtnodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_fav_found"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:visibility="gone" />
+
+    <!--   <include
+           layout="@layout/bottom_menu_lyt"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentBottom="true" />-->
+
+    <!--</androidx.cardview.widget.CardView>
+</FrameLayout>-->
+
+
+</RelativeLayout>

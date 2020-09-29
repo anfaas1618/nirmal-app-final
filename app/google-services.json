@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "608525595870",
+    "firebase_url": "https://optical-storm.firebaseio.com",
+    "project_id": "optical-storm",
+    "storage_bucket": "optical-storm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608525595870:android:b11100668a8e8a109c3e4f",
+        "android_client_info": {
+          "package_name": "com.mibtech.optical"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608525595870-8fmh4ogr81jvkqk91s3bubbm375nc3bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB89zvyeB07k7SaKNfJlXX7ml9fs8KCY14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608525595870-8fmh4ogr81jvkqk91s3bubbm375nc3bq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

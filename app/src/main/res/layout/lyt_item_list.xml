@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lytmain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_favorite_not" />
+
+        <TextView
+            android:id="@+id/txtstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toStartOf="@+id/imgFav"
+            android:fontFamily="sans-serif-condensed"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imgThumb"
+            android:layout_width="@dimen/c_thumb_width"
+            android:layout_height="@dimen/c_thumb_height"
+            android:layout_below="@+id/txtstatus"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtstatus"
+            android:layout_toEndOf="@+id/imgThumb">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="2dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+
+                android:padding="1dp"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            <LinearLayout
+                android:id="@+id/lytprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productName"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtmeasurement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txtoriginalprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textSize="@dimen/txt_size" />
+
+                <TextView
+                    android:id="@+id/txtprice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/showDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="3dp"
+                    android:paddingEnd="3dp"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/txt_size" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/lytIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytprice">
+
+                <ImageView
+                    android:id="@+id/imgIndicator"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/qtyLyt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center">
+
+                    <ImageButton
+                        android:id="@+id/btnminusqty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="7dp"
+                        app:srcCompat="@drawable/ic_remove" />
+
+                    <TextView
+                        android:id="@+id/txtqty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btnaddqty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:padding="7dp"
+                        app:srcCompat="@drawable/ic_add" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/imgarrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lytIndicator"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_border"
+                android:gravity="center_vertical"
+                android:padding="3dp"
+                android:text="@string/more_variants"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/small_size" />
+
+
+            <!--</RelativeLayout>-->
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_below="@+id/imgarrow"
+                android:layout_alignParentEnd="true"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
