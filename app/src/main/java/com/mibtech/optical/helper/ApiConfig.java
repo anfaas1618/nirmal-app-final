@@ -416,7 +416,13 @@ public class ApiConfig {
                             Constant.MAX_EARN_AMOUNT = object.getString(Constant.KEY_MAX_EARN_AMOUNT);
                             Constant.MINIMUM_WITHDRAW_AMOUNT = Double.parseDouble(object.getString(Constant.KEY_MIN_WIDRAWAL));
                             Constant.SETTING_CURRENCY_SYMBOL = object.getString(Constant.CURRENCY);
-                            Constant.SETTING_TAX = Double.parseDouble(object.getString(Constant.TAX));
+                         try {
+                             Constant.SETTING_TAX = Double.parseDouble(object.getString(Constant.TAX));
+                         }catch (Exception e)
+                         {
+
+                             Log.e("TAG", "onSuccess: "+e.getMessage() );
+                         }
                             Constant.SETTING_DELIVERY_CHARGE = Double.parseDouble(object.getString(Constant.DELIEVERY_CHARGE));
                             Constant.SETTING_MAIL_ID = object.getString(Constant.REPLY_TO);
                             Constant.SETTING_MINIMUM_AMOUNT_FOR_FREE_DELIVERY = Double.parseDouble(object.getString(Constant.MINIMUM_AMOUNT));
