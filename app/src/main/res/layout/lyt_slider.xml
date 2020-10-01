@@ -8,8 +8,8 @@
     android:id="@+id/lytmain">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="264dp"
+        android:layout_height="155dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/placeholder" />
 
