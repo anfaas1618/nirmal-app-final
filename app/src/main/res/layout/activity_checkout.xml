@@ -40,6 +40,16 @@
             android:textColor="@color/txt_color" />
 
         <TextView
+            android:id="@+id/tvPowerType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:drawablePadding="@dimen/margin_10dp"
+            android:text="@string/powerType"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/gray" />
+
+        <TextView
             android:id="@+id/tvPayment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -477,6 +487,127 @@
                             android:visibility="gone" />
                     </LinearLayout>
                 </LinearLayout>
+            </LinearLayout>
+            
+            
+            <LinearLayout
+                android:id="@+id/powerTypeLyt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/selectPowerType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/selectPowerType"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <CheckBox
+                        android:id="@+id/chSingleVision"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:tag="singlevision"
+                        android:text="@string/singleVision"/>
+                    <CheckBox
+                        android:id="@+id/chBifocal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:tag="bifocal"
+                        android:text="@string/bifocalProgressive"/>
+
+                    <CheckBox
+                        android:id="@+id/chZeroPower"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:tag="zeroPower"
+                        android:text="@string/zeroPower"/>
+
+                    <CheckBox
+                        android:id="@+id/chFrameOnly"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:tag="frameOnly"
+                        android:text="@string/frameOnly"/>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/selectLens"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/selectLens"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutDirection="ltr"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                    <CheckBox
+                        android:id="@+id/chLensType1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:tag="lensType1"
+                        android:text="@string/lensType1"/>
+                    <CheckBox
+                        android:id="@+id/chLensType2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:tag="lensType2"
+                        android:text="@string/lensType2"/>
+                    </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/specsPower"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/powerDetails"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"/>
+                </RelativeLayout>
+
+
+
+            
+        
             </LinearLayout>
 
 

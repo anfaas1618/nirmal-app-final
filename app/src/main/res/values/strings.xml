@@ -6,7 +6,7 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_conditions">Terms &amp; Conditions</string>
 
-<!--    Note : If you are changeing privacy policy and terms condition word then then in word which you use in 'privacy_policy'
+    <!--    Note : If you are changeing privacy policy and terms condition word then then in word which you use in 'privacy_policy'
                 and 'terms_conditions' these two words should be same in 'msg_privacy_terms' string.-->
 
     <string name="drawer_open">open</string>
@@ -260,6 +260,24 @@
     <string name="loading">Loading&#8230;</string>
     <string name="processing">Processing&#8230;</string>
     <string name="order_failed">Order Failed</string>
+
+
+    <string name="powerType">Power Details</string>
+    <string name="selectPowerType">Select Power Type</string>
+    <string name="singleVision">Single Vision</string>
+    <string name="bifocalProgressive">Bifocal / Progressive</string>
+    <string name="zeroPower">Zero Power</string>
+    <string name="frameOnly">Frame Only</string>
+
+    <string name="selectLens">Select Lens</string>
+    <string name="lensType1">Lens Type 1</string>
+    <string name="lensType2">Lens Type 2</string>
+
+    <string name="powerDetails">Specs Power</string>
+
+
+
+
 
     <!--invite friend msg-->
     <string name="invite_frnd_title">Invite Friend Using</string>
