@@ -543,6 +543,14 @@
                         android:text="@string/zeroPower"/>
 
                     <CheckBox
+                        android:id="@+id/chsingleTinted"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:tag="singleTinted"
+                        android:text="@string/singleTinted"/>
+
+                    <CheckBox
                         android:id="@+id/chFrameOnly"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
