@@ -267,6 +267,7 @@
     <string name="singleVision">Single Vision</string>
     <string name="bifocalProgressive">Bifocal / Progressive</string>
     <string name="zeroPower">Zero Power</string>
+    <string name="singleTinted">Tinted Single Version</string>
     <string name="frameOnly">Frame Only</string>
 
     <string name="selectLens">Select Lens</string>
