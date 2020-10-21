@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -85,7 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -498,169 +499,12 @@
                 android:orientation="vertical"
                 android:visibility="visible">
 
-                <RelativeLayout
+
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/selectPowerType"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:text="@string/selectPowerType"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="16sp" />
-
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_height="wrap_content"
-                    android:layoutDirection="ltr"
-                    android:orientation="vertical"
-                    android:weightSum="3">
 
-                    <CheckBox
-                        android:id="@+id/chSingleVision"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.8"
-                        android:tag="singlevision"
-                        android:text="@string/singleVision" />
-
-                    <LinearLayout
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-
-                        android:layoutDirection="ltr"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <CheckBox
-                            android:id="@+id/chAntiGlare1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="antiglare"
-                            android:text="@string/antiGlare1" />
-
-                        <CheckBox
-                            android:id="@+id/chBlueBlock1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="blueblock"
-                            android:text="@string/blueBlock1" />
-
-                        <CheckBox
-                            android:id="@+id/chPhotoChromics1"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="photoChromics"
-                            android:text="@string/photoChromics1" />
-
-                    </LinearLayout>
-
-
-                    <CheckBox
-                        android:id="@+id/chBifocal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.8"
-                        android:tag="bifocal"
-                        android:text="@string/bifocal" />
-                    <LinearLayout
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-
-                        android:layoutDirection="ltr"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <CheckBox
-                            android:id="@+id/chAntiGlare2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="antiglare"
-                            android:text="@string/antiGlare2" />
-
-                        <CheckBox
-                            android:id="@+id/chBlueBlock2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="blueblock"
-                            android:text="@string/blueBlock2" />
-
-                        <CheckBox
-                            android:id="@+id/chPhotoChromics2"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="photoChromics"
-                            android:text="@string/photoChromics2" />
-
-                    </LinearLayout>
-
-                    <CheckBox
-                        android:id="@+id/chProgressive"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.8"
-                        android:tag="bifocal"
-                        android:text="@string/progressive" />
-                    <LinearLayout
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-
-                        android:layoutDirection="ltr"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <CheckBox
-                            android:id="@+id/chAntiGlare3"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="antiglare"
-                            android:text="@string/antiGlare3" />
-
-                        <CheckBox
-                            android:id="@+id/chBlueBlock3"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="blueblock"
-                            android:text="@string/blueBlock3" />
-
-                        <CheckBox
-                            android:id="@+id/chPhotoChromics3"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.8"
-                            android:tag="photoChromics"
-                            android:text="@string/photoChromics3" />
-
-                    </LinearLayout>
-
-                    <CheckBox
-                        android:id="@+id/chZeroPower"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.8"
-                        android:tag="zeroPower"
-                        android:text="@string/zeroPower" />
-
-
-                </LinearLayout>
 
 
                 <RelativeLayout
@@ -676,11 +520,6 @@
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp" />
 
-                    <TableLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:stretchColumns="1"
-                        android:padding="30dp">
 
                         <TableRow>
                             <TextView
@@ -819,7 +658,6 @@
 
                     </TableLayout>
                 </RelativeLayout>
-
 
             </LinearLayout>
 

@@ -69,7 +69,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
     private String TAG = CheckoutActivity.class.getSimpleName();
     public Toolbar toolbar;
     public TextView tvTaxPercent, tvTaxAmt, tvDelivery, tvPayment, tvLocation, tvAlert, tvWltBalance, tvCity, tvName, tvTotal, tvDeliveryCharge, tvSubTotal, tvCurrent, tvWallet, tvPromoCode, tvPCAmount, tvPlaceOrder, tvConfirmOrder, tvPreTotal;
-    LinearLayout lytPayOption, lytTax, lytOrderList, lytWallet, lytCLocation, paymentLyt, deliveryLyt, lytPayU, lytPayPal, lytRazorPay, dayLyt;
+    LinearLayout lytPayOption, lytTax, lytOrderList, lytWallet, lytCLocation, paymentLyt, deliveryLyt, lytPayU, lytPayPal, lytRazorPay, dayLyt,powerTypeLyt;
     Button btnApply;
     EditText edtPromoCode;
     public ProgressBar prgLoading;
@@ -111,6 +111,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         session = new Session(CheckoutActivity.this);
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        powerTypeLyt=findViewById(R.id.powerTypeLyt);
         pBar = findViewById(R.id.pBar);
         lytTax = findViewById(R.id.lytTax);
         tvTaxAmt = findViewById(R.id.tvTaxAmt);
@@ -385,7 +386,8 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
                 tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check, 0, 0, 0);
                 tvConfirmOrder.setVisibility(View.GONE);
                 tvPlaceOrder.setVisibility(View.VISIBLE);
-                paymentLyt.setVisibility(View.VISIBLE);
+                //todo here we do the power settings
+                powerTypeLyt.setVisibility(View.VISIBLE);
                 deliveryLyt.setVisibility(View.GONE);
 
                 break;
