@@ -265,8 +265,27 @@
     <string name="powerType">Power Details</string>
     <string name="selectPowerType">Select Power Type</string>
     <string name="singleVision">Single Vision</string>
-    <string name="bifocalProgressive">Bifocal / Progressive</string>
+    <string name="bifocal">Bifocal</string>
     <string name="zeroPower">Zero Power</string>
+    <string name="progressive">Progressive</string>
+
+    <string name="antiGlare1">Anti Glare (Rs 999)</string>
+    <string name="antiGlare2">Anti Glare (Rs 1299)</string>
+    <string name="antiGlare3">Anti Glare (Rs 1999)</string>
+
+    <string name="blueBlock1">Blue Block (Rs 1399)</string>
+    <string name="blueBlock2">Anti Glare (Rs 1699)</string>
+    <string name="blueBlock3">Anti Glare (Rs 2899)</string>
+
+    <string name="photoChromics1">Anti Glare (Rs 1199)</string>
+    <string name="photoChromics2">Anti Glare (Rs 1899)</string>
+    <string name="photoChromics3">Anti Glare (Rs 2699)</string>
+    
+    <string name="newRx">New Rx</string>
+
+
+
+
     <string name="singleTinted">Tinted Single Version</string>
     <string name="frameOnly">Frame Only</string>
 
@@ -275,8 +294,16 @@
     <string name="lensType2">Lens Type 2</string>
 
     <string name="powerDetails">Specs Power</string>
+    <string name="spherical">SPH</string>
+    <string name="cylinder">CYL</string>
+    <string name="axis">AXIS</string>
+    <string name="va">V/A</string>
 
+    <string name="rightEye">R. Eye</string>
+    <string name="leftEye">L. Eye</string>
 
+    <string name="addition">Additional</string>
+    <string name="intermediate">Intermediate</string>
 
 
 

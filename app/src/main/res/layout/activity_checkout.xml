@@ -5,6 +5,7 @@
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
     android:background="@color/white"
     android:focusableInTouchMode="true">
 
@@ -499,182 +500,11 @@
                 android:visibility="visible">
 
 
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     xmlns:card_view="http://schemas.android.com/apk/res-auto"
                     android:layout_height="wrap_content"
-                    card_view:cardElevation="2dp"
-                    card_view:cardCornerRadius="12dp"
-                    >
-                    <FrameLayout
 
-                        android:layout_width="4dp"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/card_edge"/>
-                    <LinearLayout
-                        android:id="@+id/lato"
-                        android:layout_marginLeft="7dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="visible">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:id="@+id/selectPowerType"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:text="@string/selectPowerType"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="24sp"
-                                android:layout_marginBottom="3dp"/>
-
-                        </RelativeLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layoutDirection="ltr"
-                            android:orientation="horizontal"
-                            android:weightSum="2">
-
-                            <CheckBox
-                                android:id="@+id/chSingleVision"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:tag="singlevision"
-                                android:text="@string/singleVision"
-                                android:textSize="14sp" />
-
-                            <CheckBox
-                                android:id="@+id/chBifocal"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:tag="bifocal"
-                                android:text="@string/bifocalProgressive"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layoutDirection="ltr"
-                            android:orientation="horizontal"
-                            android:weightSum="2">
-
-                            <CheckBox
-                                android:id="@+id/chZeroPower"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:tag="zeroPower"
-                                android:textFontWeight="1"
-                                android:text="@string/zeroPower"
-                                android:textSize="14sp" />
-
-                            <CheckBox
-                                android:id="@+id/chsingleTinted"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:textFontWeight="1"
-                                android:layout_margin="@dimen/dimen_5dp"
-                                android:tag="singleTinted"
-                                android:text="@string/singleTinted"
-                                android:textSize="14sp" />
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layoutDirection="ltr"
-                            android:orientation="horizontal"
-                            android:weightSum="2">
-
-                            <CheckBox
-                                android:id="@+id/chFrameOnly"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.8"
-                                android:tag="frameOnly"
-                                android:text="@string/frameOnly"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-
-
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_12dp"
-                    card_view:cardElevation="2dp"
-                    card_view:cardCornerRadius="12dp"
-                    >
-                    <FrameLayout
-
-                        android:layout_width="4dp"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/card_edge"/>
-                    <LinearLayout
-                        android:id="@+id/lato2"
-                        android:layout_marginLeft="7dp"
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="visible">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <TextView
-                                android:id="@+id/selectLens"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:text="@string/selectLens"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="24sp"
-                                android:layout_marginBottom="3dp" />
-                        </RelativeLayout>
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layoutDirection="ltr"
-                            android:orientation="vertical"
-                            android:weightSum="3">
-
-                            <CheckBox
-                                android:id="@+id/chLensType1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="0.8"
-                                android:tag="lensType1"
-                                android:text="@string/lensType1" />
-
-                            <CheckBox
-                                android:id="@+id/chLensType2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-
-                                android:tag="lensType2"
-                                android:text="@string/lensType2" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
 
                 <RelativeLayout
@@ -689,8 +519,145 @@
                         android:text="@string/powerDetails"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="16sp" />
-                </RelativeLayout>
 
+
+                        <TableRow>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="@string/newRx"
+                                android:gravity="center"
+                                android:padding="3dp"
+                                android:background="#DBFFA0"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+
+                            <TextView
+
+                                android:background="#C8E9FF"
+                                android:padding="3dp"
+                                android:text="@string/spherical"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:text="@string/cylinder"
+                                android:padding="3dp"
+                                android:background="#C8E9FF"
+                                android:textAlignment="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="@string/axis"
+                                android:padding="3dp"
+                                android:background="#C8E9FF"
+                                android:textAlignment="center"
+                                android:textStyle="bold"/>
+                            <TextView
+                                android:text="@string/va"
+                                android:padding="3dp"
+                                android:background="#C8E9FF"
+                                android:textAlignment="center"
+                                android:textStyle="bold"/>
+                        </TableRow>
+
+                        <TableRow>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="@string/rightEye"
+                                android:gravity="center"
+                                android:padding="3dp"
+                                android:background="#C8E9FF"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                        </TableRow>
+
+                        <TableRow>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:text="@string/leftEye"
+                                android:gravity="center"
+                                android:padding="3dp"
+                                android:background="#C8E9FF"
+                                android:textAlignment="center"
+                                android:textStyle="bold" />
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:padding="3dp"
+                                android:background="@color/white"
+                                android:textAlignment="center"/>
+                        </TableRow>
+
+                        <TableRow>
+                            <TextView
+                                android:text="@string/addition"
+                                android:background="@color/light_grey"
+                                android:padding="3dp"
+                                android:textAlignment="center"
+                                android:textStyle="bold"/>
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:background="@color/white"
+                                android:padding="3dp" />
+
+                            <TextView
+                                android:text="@string/intermediate"
+                                android:background="@color/light_grey"
+                                android:padding="3dp"
+                                android:textAlignment="center"
+                                android:textStyle="bold"/>
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:background="@color/white"
+                                android:padding="3dp" />
+                            <TextView
+                                android:background="@color/white"
+                                android:padding="3dp"/>
+
+
+
+
+                        </TableRow>
+
+
+
+
+
+                    </TableLayout>
+                </RelativeLayout>
 
             </LinearLayout>
 
