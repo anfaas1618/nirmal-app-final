@@ -68,8 +68,8 @@ import com.mibtech.optical.model.Slot;
 public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCallback, PaymentResultListener {
     private String TAG = CheckoutActivity.class.getSimpleName();
     public Toolbar toolbar;
-    public TextView tvTaxPercent, tvTaxAmt, tvDelivery, tvPayment, tvLocation, tvAlert, tvWltBalance, tvCity, tvName, tvTotal, tvDeliveryCharge, tvSubTotal, tvCurrent, tvWallet, tvPromoCode, tvPCAmount, tvPlaceOrder, tvConfirmOrder, tvPreTotal;
-    LinearLayout lytPayOption, lytTax, lytOrderList, lytWallet, lytCLocation, paymentLyt, deliveryLyt, lytPayU, lytPayPal, lytRazorPay, dayLyt,powerTypeLyt;
+    public TextView tvTaxPercent, tvTaxAmt, tvDelivery, tvPayment, tvPowerType,tvLocation, tvAlert, tvWltBalance, tvCity, tvName, tvTotal, tvDeliveryCharge, tvSubTotal, tvCurrent, tvWallet, tvPromoCode, tvPCAmount, tvPlaceOrder, tvConfirmOrder, tvPreTotal,tvConfirmDelivery;
+    LinearLayout lytPayOption, lytTax, lytOrderList, lytWallet, lytCLocation, paymentLyt,powerTypeLyt, deliveryLyt, lytPayU, lytPayPal, lytRazorPay, dayLyt;
     Button btnApply;
     EditText edtPromoCode;
     public ProgressBar prgLoading;
@@ -111,7 +111,6 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         session = new Session(CheckoutActivity.this);
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        powerTypeLyt=findViewById(R.id.powerTypeLyt);
         pBar = findViewById(R.id.pBar);
         lytTax = findViewById(R.id.lytTax);
         tvTaxAmt = findViewById(R.id.tvTaxAmt);
@@ -124,6 +123,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         tvLocation = findViewById(R.id.tvLocation);
         tvDelivery = findViewById(R.id.tvDelivery);
         tvPayment = findViewById(R.id.tvPayment);
+        tvPowerType=findViewById(R.id.tvPowerType);
         tvPCAmount = findViewById(R.id.tvPCAmount);
         tvPromoCode = findViewById(R.id.tvPromoCode);
         tvAlert = findViewById(R.id.tvAlert);
@@ -146,11 +146,13 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         lytWallet = findViewById(R.id.lytWallet);
         walletLyt = findViewById(R.id.walletLyt);
         paymentLyt = findViewById(R.id.paymentLyt);
+        powerTypeLyt=findViewById(R.id.powerTypeLyt);
         deliveryLyt = findViewById(R.id.deliveryLyt);
         tvWallet = findViewById(R.id.tvWallet);
         prgLoading = findViewById(R.id.prgLoading);
         tvPlaceOrder = findViewById(R.id.tvPlaceOrder);
         tvConfirmOrder = findViewById(R.id.tvConfirmOrder);
+        tvConfirmDelivery=findViewById(R.id.tvConfirmDelivery);
         lytWallet.setVisibility(View.GONE);
 
 
@@ -163,7 +165,9 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         tvCurrent.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_address, 0, 0, 0);
         tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process, 0, 0, 0);
         tvPayment.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process_gray, 0, 0, 0);
+        tvPowerType.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process_gray, 0, 0, 0);
         tvConfirmOrder.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_confirm, 0);
+        tvConfirmDelivery.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_confirm, 0);
         tvPlaceOrder.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_process, 0);
         tvPreTotal.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
         ApiConfig.getWalletBalance(CheckoutActivity.this, session);
@@ -376,19 +380,29 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         tvSubTotal.setText(Constant.SETTING_CURRENCY_SYMBOL + DatabaseHelper.decimalformatData.format(subtotal));
     }
 
-
     public void OnBtnClick(View view) {
         switch (view.getId()) {
+            case R.id.tvConfirmDelivery:
+                tvPowerType.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
+                tvPowerType.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process, 0, 0, 0);
+                tvDelivery.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.light_green));
+                tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check, 0, 0, 0);
+                deliveryLyt.setVisibility(View.GONE);
+                tvConfirmDelivery.setVisibility(View.GONE);
+                powerTypeLyt.setVisibility(View.VISIBLE);
+                tvConfirmOrder.setVisibility(View.VISIBLE);
+                //todo here add the logic to power of lens
+                //todo price increment on lens
+                break;
             case R.id.tvConfirmOrder:
                 tvPayment.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
                 tvPayment.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process, 0, 0, 0);
-                tvDelivery.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.light_green));
-                tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check, 0, 0, 0);
+                tvPowerType.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.light_green));
+                tvPowerType.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check, 0, 0, 0);
                 tvConfirmOrder.setVisibility(View.GONE);
                 tvPlaceOrder.setVisibility(View.VISIBLE);
-                //todo here we do the power settings
-                powerTypeLyt.setVisibility(View.VISIBLE);
-                deliveryLyt.setVisibility(View.GONE);
+                paymentLyt.setVisibility(View.VISIBLE);
+                powerTypeLyt.setVisibility(View.GONE);
 
                 break;
             case R.id.tvLocation:
