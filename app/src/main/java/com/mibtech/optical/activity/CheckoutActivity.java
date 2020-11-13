@@ -219,7 +219,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         }
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        SetDataTotal();
+        SetDataTotal(0);
         chWallet.setTag("false");
         getWalletBalance();
         tvWltBalance.setText(getString(R.string.total_balance) + Constant.SETTING_CURRENCY_SYMBOL + Constant.WALLET_BALANCE);
@@ -266,7 +266,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         lytWallet.setVisibility(View.GONE);
         chWallet.setChecked(false);
         chWallet.setTag("false");
-        SetDataTotal();
+        SetDataTotal(0);
     }
 
     public void setPaymentMethod() {
@@ -358,8 +358,8 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
     }
 
 
-    public void SetDataTotal() {
-        total = databaseHelper.getTotalCartAmt(session);
+    public void SetDataTotal(int val_lens) {
+        total = databaseHelper.getTotalCartAmt(session)+val_lens;
         tvTotal.setText(Constant.SETTING_CURRENCY_SYMBOL + DatabaseHelper.decimalformatData.format(total));
         subtotal = total;
         if (total <= Constant.SETTING_MINIMUM_AMOUNT_FOR_FREE_DELIVERY) {
@@ -393,6 +393,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
                 tvConfirmOrder.setVisibility(View.VISIBLE);
                 //todo here add the logic to power of lens
                 //todo price increment on lens
+                SetDataTotal(12);
                 break;
             case R.id.tvConfirmOrder:
                 tvPayment.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
@@ -449,7 +450,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         sendparams.put(Constant.USER_ID, session.getData(Session.KEY_ID));
         sendparams.put(Constant.TAX_PERCENT, String.valueOf(Constant.SETTING_TAX));
         sendparams.put(Constant.TAX_AMOUNT, DatabaseHelper.decimalformatData.format(taxAmt));
-        sendparams.put(Constant.TOTAL, DatabaseHelper.decimalformatData.format(total));
+        sendparams.put(Constant.TOTAL, "220");//try todo
         sendparams.put(Constant.FINAL_TOTAL, DatabaseHelper.decimalformatData.format(subtotal));
         sendparams.put(Constant.PRODUCT_VARIANT_ID, String.valueOf(variantIdList));
         sendparams.put(Constant.QUANTITY, String.valueOf(qtyList));
@@ -459,6 +460,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         sendparams.put(Constant.KEY_WALLET_USED, chWallet.getTag().toString());
         sendparams.put(Constant.KEY_WALLET_BALANCE, String.valueOf(usedBalance));
         sendparams.put(Constant.PAYMENT_METHOD, paymentMethod);
+
         final String address = session.getData(Session.KEY_ADDRESS) + ", " + session.getData(Session.KEY_AREA) + ", " + session.getData(Session.KEY_CITY) + ", " + session.getData(Session.KEY_PINCODE) + ", Deliver to " + label;
         if (!pCode.isEmpty()) {
             sendparams.put(Constant.PROMO_CODE, pCode);
@@ -468,6 +470,8 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         sendparams.put(Constant.LONGITUDE, session.getCoordinates(Session.KEY_LONGITUDE));
         sendparams.put(Constant.LATITUDE, session.getCoordinates(Session.KEY_LATITUDE));
         sendparams.put(Constant.EMAIL, session.getData(Session.KEY_EMAIL));
+     sendparams.put("lens_prices","123");//HERE
+        sendparams.put("lens_name","white eyes");//HERE
         System.out.println("=====params " + sendparams.toString());
 
 
@@ -740,7 +744,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
             isApplied = false;
             appliedCode = "";
             pCode = "";
-            SetDataTotal();
+            SetDataTotal(0);
 
         }
     }
@@ -757,7 +761,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
                     Toast.makeText(getApplicationContext(), getString(R.string.promo_code_already_applied), Toast.LENGTH_SHORT).show();
                 } else {
                     if (isApplied && !promoCode.equals(appliedCode)) {
-                        SetDataTotal();
+                        SetDataTotal(0);
                     }
                     tvAlert.setVisibility(View.GONE);
                     btnApply.setVisibility(View.INVISIBLE);

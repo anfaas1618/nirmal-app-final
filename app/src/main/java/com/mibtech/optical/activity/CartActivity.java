@@ -102,7 +102,7 @@ public class CartActivity extends AppCompatActivity {
     }
 
     @SuppressLint("SetTextI18n")
-    public static void SetDataTotal() {
+    public static void SetDataTotal(int val) {
         double total = databaseHelper.getTotalCartAmt(session);
         String displaytotal = DatabaseHelper.decimalformatData.format(total);
         if (cartListAdapter.getItemCount() == 1) {
@@ -161,7 +161,7 @@ public class CartActivity extends AppCompatActivity {
                                         cartrecycleview.setAdapter(cartListAdapter);
                                         cartrecycleview.smoothScrollToPosition(productArrayList.size());
                                         cartrecycleview.smoothScrollToPosition(0);
-                                        SetDataTotal();
+                                        SetDataTotal(0);
                                         progressbar.setVisibility(View.GONE);
                                     }
                                 } else {

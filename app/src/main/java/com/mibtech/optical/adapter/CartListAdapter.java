@@ -136,7 +136,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.CartIt
                     public void onClick(DialogInterface dialog, int which) {
                         databaseHelper.DeleteOrderData(priceVariation.getId(), order.getId());
                         productList.remove(position);
-                        CartActivity.SetDataTotal();
+                        CartActivity.SetDataTotal(0);
                         notifyItemRemoved(position);
                         activity.invalidateOptionsMenu();
                         CartActivity.cartNames.remove("" + position);
@@ -173,7 +173,7 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.CartIt
         String[] qty_total = databaseHelper.AddUpdateOrder(priceVariation.getId(), order.getId(), isadd, activity, true, Double.parseDouble(priceVariation.getProductPrice()), priceVariation.getMeasurement() + priceVariation.getMeasurement_unit_name() + "==" + order.getName() + "==" + priceVariation.getProductPrice()).split("=");
         holder.txtQuantity.setText(qty_total[0]);
         holder.txttotalprice.setText(Constant.SETTING_CURRENCY_SYMBOL + qty_total[1]);
-        CartActivity.SetDataTotal();
+        CartActivity.SetDataTotal(0);
     }
 
 
