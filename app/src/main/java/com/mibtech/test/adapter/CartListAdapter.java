@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -20,13 +20,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.DatabaseHelper;
-import com.mibtech.optical.activity.CartActivity;
-import com.mibtech.optical.model.PriceVariation;
-import com.mibtech.optical.model.Product;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.DatabaseHelper;
+import com.mibtech.test.activity.CartActivity;
+import com.mibtech.test.model.PriceVariation;
+import com.mibtech.test.model.Product;
 
 import java.util.ArrayList;
 

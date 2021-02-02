@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 
 import android.content.Intent;
@@ -7,10 +7,10 @@ import android.util.Log;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
-import com.mibtech.optical.activity.MainActivity;
-import com.mibtech.optical.activity.OrderListActivity;
-import com.mibtech.optical.activity.ProductDetailActivity;
-import com.mibtech.optical.activity.SubCategoryActivity;
+import com.mibtech.test.activity.MainActivity;
+import com.mibtech.test.activity.OrderListActivity;
+import com.mibtech.test.activity.ProductDetailActivity;
+import com.mibtech.test.activity.SubCategoryActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 
 import android.annotation.SuppressLint;
@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
 public class Utils {
 

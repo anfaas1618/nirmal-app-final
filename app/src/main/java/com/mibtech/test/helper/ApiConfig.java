@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -59,12 +59,12 @@ import com.google.android.material.snackbar.Snackbar;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.DrawerActivity;
-import com.mibtech.optical.model.OrderTracker;
-import com.mibtech.optical.model.PriceVariation;
-import com.mibtech.optical.model.Product;
-import com.mibtech.optical.model.Slider;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.DrawerActivity;
+import com.mibtech.test.model.OrderTracker;
+import com.mibtech.test.model.PriceVariation;
+import com.mibtech.test.model.Product;
+import com.mibtech.test.model.Slider;
 
 import org.json.JSONArray;
 import org.json.JSONException;

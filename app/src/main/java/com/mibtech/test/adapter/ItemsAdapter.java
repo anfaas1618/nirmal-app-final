@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -31,15 +31,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.TrackerDetailActivity;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.Session;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.OrderTracker;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.TrackerDetailActivity;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.Session;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.OrderTracker;
 
-import static com.mibtech.optical.activity.TrackerDetailActivity.pBar;
+import static com.mibtech.test.activity.TrackerDetailActivity.pBar;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.CartItemHolder> {
 

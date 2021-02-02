@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 import android.app.Activity;
 import android.app.Application;
@@ -19,7 +19,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
 public class AppController extends Application {
 

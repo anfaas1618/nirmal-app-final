@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -33,9 +33,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Session;
+import com.mibtech.test.R;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Session;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,

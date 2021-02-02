@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.SliderAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.model.Slider;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.SliderAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.model.Slider;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.app.Activity;
 import android.text.Html;
@@ -14,9 +14,9 @@ import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.ArrayList;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.model.Notification;
+import com.mibtech.test.R;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.model.Notification;
 
 
 public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.NotificationItemHolder> {

@@ -1,4 +1,4 @@
-package com.mibtech.optical.fragment;
+package com.mibtech.test.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,11 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.OrderListActivity;
-import com.mibtech.optical.adapter.TrackerAdapter;
-import com.mibtech.optical.helper.Session;
-import com.mibtech.optical.model.OrderTracker;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.OrderListActivity;
+import com.mibtech.test.adapter.TrackerAdapter;
+import com.mibtech.test.helper.Session;
+import com.mibtech.test.model.OrderTracker;
 
 import java.util.ArrayList;
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.mibtech.optical.ui;
+package com.mibtech.test.ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -38,7 +38,7 @@ import androidx.annotation.DrawableRes;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
 
 public class CircleImageView extends NetworkImageView {

@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,12 +12,12 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.FullScreenViewActivity;
-import com.mibtech.optical.activity.ProductDetailActivity;
-import com.mibtech.optical.activity.SubCategoryActivity;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.model.Slider;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.FullScreenViewActivity;
+import com.mibtech.test.activity.ProductDetailActivity;
+import com.mibtech.test.activity.SubCategoryActivity;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.model.Slider;
 
 import java.util.ArrayList;
 

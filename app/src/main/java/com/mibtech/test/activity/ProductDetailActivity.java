@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -47,15 +47,15 @@ import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.SliderAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.DatabaseHelper;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.PriceVariation;
-import com.mibtech.optical.model.Product;
-import com.mibtech.optical.model.Slider;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.SliderAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.DatabaseHelper;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.PriceVariation;
+import com.mibtech.test.model.Product;
+import com.mibtech.test.model.Slider;
 
 public class ProductDetailActivity extends AppCompatActivity {
 

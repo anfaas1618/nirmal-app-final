@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 import com.android.volley.toolbox.ImageLoader;
 
@@ -6,7 +6,7 @@ import com.android.volley.toolbox.ImageLoader;
 public class Constant {
 
 
-    public static String MAINBASEUrl = "https://mibtechnologies.in/opticalstorm/";
+    public static String MAINBASEUrl = "https://mibtechnologies.in/test/";
 
     public static String BaseUrl = MAINBASEUrl + "api-firebase/";
     public static ImageLoader imageLoader = AppController.getInstance().getImageLoader();

@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
@@ -57,17 +57,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.AppController;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.GPSTracker;
-import com.mibtech.optical.helper.PinView;
-import com.mibtech.optical.helper.ProgressDisplay;
-import com.mibtech.optical.helper.Session;
-import com.mibtech.optical.helper.Utils;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.City;
+import com.mibtech.test.R;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.AppController;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.GPSTracker;
+import com.mibtech.test.helper.PinView;
+import com.mibtech.test.helper.ProgressDisplay;
+import com.mibtech.test.helper.Session;
+import com.mibtech.test.helper.Utils;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.City;
 
 
 public class LoginActivity extends AppCompatActivity implements OnMapReadyCallback {

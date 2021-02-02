@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -55,21 +55,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.DatabaseHelper;
-import com.mibtech.optical.helper.PaymentModelClass;
-import com.mibtech.optical.helper.Session;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.Slot;
+import com.mibtech.test.R;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.DatabaseHelper;
+import com.mibtech.test.helper.PaymentModelClass;
+import com.mibtech.test.helper.Session;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.Slot;
 
 @SuppressLint("SetTextI18n")
 public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCallback, PaymentResultListener {
     private String TAG = CheckoutActivity.class.getSimpleName();
     public Toolbar toolbar;
-    public TextView tvTaxPercent, tvTaxAmt, tvDelivery, tvPayment, tvPowerType,tvLocation, tvAlert, tvWltBalance, tvCity, tvName, tvTotal, tvDeliveryCharge, tvSubTotal, tvCurrent, tvWallet, tvPromoCode, tvPCAmount, tvPlaceOrder, tvConfirmOrder, tvPreTotal,tvConfirmDelivery;
-    LinearLayout lytPayOption, lytTax, lytOrderList, lytWallet, lytCLocation, paymentLyt,powerTypeLyt, deliveryLyt, lytPayU, lytPayPal, lytRazorPay, dayLyt;
+    public TextView tvTaxPercent, tvTaxAmt, tvDelivery, tvPayment,tvLocation, tvAlert, tvWltBalance, tvCity, tvName, tvTotal, tvDeliveryCharge, tvSubTotal, tvCurrent, tvWallet, tvPromoCode, tvPCAmount, tvPlaceOrder, tvConfirmOrder, tvPreTotal;
+    LinearLayout lytPayOption, lytTax, lytOrderList, lytWallet, lytCLocation,paymentLyt, deliveryLyt, lytPayU, lytPayPal, lytRazorPay, dayLyt;
     Button btnApply;
     EditText edtPromoCode;
     public ProgressBar prgLoading;
@@ -83,12 +83,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
     SupportMapFragment mapFragment;
     CheckBox chWallet, chHome, chWork;
     public RadioButton rToday, rTomorrow;
-    public CheckBox chSingleVision,chBifocal,chProgressive;
-    public CheckBox ch999,ch1399,ch1199,ch1299,ch1699,ch1899,ch1999,ch2899,ch2699,chZero;
     public LinearLayout single_vision_ll,bifocal_ll,progressive_ll;
-    public  RelativeLayout relspec;
-    public String lens_price,lens_name;
-    public  EditText RSPH,RCYL,RAXIS,RVA ,LSPH,LCYL,LAXIS,LVA,additional,intermediate;
     String deliveryTime = "", deliveryDay = "", pCode = "", paymentMethod = "", label = "", appliedCode = "";
     RadioButton rbCod, rbPayU, rbPayPal, rbRazorPay;
     ProgressDialog mProgressDialog;
@@ -142,7 +137,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         tvLocation = findViewById(R.id.tvLocation);
         tvDelivery = findViewById(R.id.tvDelivery);
         tvPayment = findViewById(R.id.tvPayment);
-        tvPowerType=findViewById(R.id.tvPowerType);
+
         tvPCAmount = findViewById(R.id.tvPCAmount);
         tvPromoCode = findViewById(R.id.tvPromoCode);
         tvAlert = findViewById(R.id.tvAlert);
@@ -164,49 +159,15 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         lytCLocation = findViewById(R.id.lytCLocation);
         lytWallet = findViewById(R.id.lytWallet);
         walletLyt = findViewById(R.id.walletLyt);
-        paymentLyt = findViewById(R.id.paymentLyt);
-        powerTypeLyt=findViewById(R.id.powerTypeLyt);
+        paymentLyt= findViewById(R.id.paymentLyt);
         deliveryLyt = findViewById(R.id.deliveryLyt);
         tvWallet = findViewById(R.id.tvWallet);
         prgLoading = findViewById(R.id.prgLoading);
         tvPlaceOrder = findViewById(R.id.tvPlaceOrder);
         tvConfirmOrder = findViewById(R.id.tvConfirmOrder);
-        tvConfirmDelivery=findViewById(R.id.tvConfirmDelivery);
-        chSingleVision=findViewById(R.id.chSingleVision);
-        single_vision_ll=findViewById(R.id.single_vision_ll);
-        chBifocal=findViewById(R.id.chBifocal);
-        bifocal_ll=findViewById(R.id.bifocal_ll);
-        chProgressive=findViewById(R.id.chProgressive);
-        progressive_ll=findViewById(R.id.progressive_ll);
-        relspec=findViewById(R.id.relspec);
+
         lytWallet.setVisibility(View.GONE);
-        //checkboxes//
-        ch999=findViewById(R.id.chAntiGlare1);
-        ch1399=findViewById(R.id.chBlueBlock1);
-        ch1199=findViewById(R.id.chPhotoChromics1);
-        ch1299=findViewById(R.id.chAntiGlare2);
-        ch1699=findViewById(R.id.chBlueBlock2);
-        ch1899=findViewById(R.id.chPhotoChromics2);
-        ch1999=findViewById(R.id.chAntiGlare3);
-        ch2899=findViewById(R.id.chBlueBlock3);
-        ch2699=findViewById(R.id.chPhotoChromics3);
-        chZero=findViewById(R.id.chZeroPower);
         //editText
-        RSPH=findViewById(R.id.RSPH);
-        RCYL=findViewById(R.id.RCYL);
-        RAXIS=findViewById(R.id.RAXIS);
-        RVA=findViewById(R.id.RVA);
-
-
-
-        LSPH=findViewById(R.id.LSPH);
-        LCYL=findViewById(R.id.LCYL);
-        LAXIS=findViewById(R.id.LAXIS);
-        LVA=findViewById(R.id.LVA);
-
-        intermediate=findViewById(R.id.intermediate);
-        additional=findViewById(R.id.additional);
-
 
 
         rToday = findViewById(R.id.rToday);
@@ -218,9 +179,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         tvCurrent.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_address, 0, 0, 0);
         tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process, 0, 0, 0);
         tvPayment.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process_gray, 0, 0, 0);
-        tvPowerType.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process_gray, 0, 0, 0);
         tvConfirmOrder.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_confirm, 0);
-        tvConfirmDelivery.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_confirm, 0);
         tvPlaceOrder.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_process, 0);
         tvPreTotal.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_info, 0, 0, 0);
         ApiConfig.getWalletBalance(CheckoutActivity.this, session);
@@ -272,7 +231,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         }
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        SetDataTotal(0);
+        SetDataTotal();
         chWallet.setTag("false");
         getWalletBalance();
         tvWltBalance.setText(getString(R.string.total_balance) + Constant.SETTING_CURRENCY_SYMBOL + Constant.WALLET_BALANCE);
@@ -309,112 +268,6 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
 
             }
         });//todo checking
-        chSingleVision.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (chSingleVision.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"check");
-                    single_vision_ll.setVisibility(View.VISIBLE);
-                    chBifocal.setChecked(false);
-                    chProgressive.setChecked(false);
-                    progressive_ll.setVisibility(View.GONE);
-                    bifocal_ll.setVisibility(View.GONE);
-                    ch1299.setChecked(false);
-                    ch1699.setChecked(false);
-                    ch1899.setChecked(false);
-                    ch1999.setChecked(false);
-                    ch2899.setChecked(false);
-                    ch2699.setChecked(false);
-                }
-                if (!chSingleVision.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"not check");
-                    single_vision_ll.setVisibility(View.GONE);
-                    ch999.setChecked(false);
-                    ch1399.setChecked(false);
-                    ch1199.setChecked(false);
-
-                }
-
-            }
-        });
-        chBifocal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (chBifocal.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"check");
-                    bifocal_ll.setVisibility(View.VISIBLE);
-                    chSingleVision.setChecked(false);
-                    chProgressive.setChecked(false);
-                    single_vision_ll.setVisibility(View.GONE);
-                    progressive_ll.setVisibility(View.GONE);
-                    ch999.setChecked(false);
-                    ch1399.setChecked(false);
-                    ch1199.setChecked(false);
-                    ch1999.setChecked(false);
-                    ch2899.setChecked(false);
-                    ch2699.setChecked(false);
-                }
-                if (!chBifocal.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"not check");
-                    bifocal_ll.setVisibility(View.GONE);
-                    ch1299.setChecked(false);
-                    ch1699.setChecked(false);
-                    ch1899.setChecked(false);
-
-                }
-
-            }
-        });
-        chProgressive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (chProgressive.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"check");
-                    progressive_ll.setVisibility(View.VISIBLE);
-                    chSingleVision.setChecked(false);
-                    chBifocal.setChecked(false);
-                    single_vision_ll.setVisibility(View.GONE);
-                    bifocal_ll.setVisibility(View.GONE);
-                    ch1299.setChecked(false);
-                    ch1699.setChecked(false);
-                    ch1899.setChecked(false);
-                    ch999.setChecked(false);
-                    ch1399.setChecked(false);
-                    ch1199.setChecked(false);
-                }
-                if (!chProgressive.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"not check");
-                    progressive_ll.setVisibility(View.GONE);
-                    ch1999.setChecked(false);
-                    ch2899.setChecked(false);
-                    ch2699.setChecked(false);
-
-                }
-
-            }
-        });
-        chZero.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (chZero.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"check");
-                    relspec.setVisibility(View.GONE);
-                }
-                if (!chZero.isChecked())
-                {
-                    Log.i(TAG, "onClick: "+"not check");
-                    relspec.setVisibility(View.VISIBLE);
-                }
-
-            }
-        });
         PromoCodeCheck();
         setPaymentMethod();
     }
@@ -425,7 +278,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         lytWallet.setVisibility(View.GONE);
         chWallet.setChecked(false);
         chWallet.setTag("false");
-        SetDataTotal(0);
+        SetDataTotal();
     }
 
     public void setPaymentMethod() {
@@ -517,8 +370,8 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
     }
 
 
-    public void SetDataTotal(int val_lens) {
-        total = databaseHelper.getTotalCartAmt(session)+val_lens;
+    public void SetDataTotal() {
+        total = databaseHelper.getTotalCartAmt(session);
         tvTotal.setText(Constant.SETTING_CURRENCY_SYMBOL + DatabaseHelper.decimalformatData.format(total));
         subtotal = total;
         if (total <= Constant.SETTING_MINIMUM_AMOUNT_FOR_FREE_DELIVERY) {
@@ -541,99 +394,18 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
 
     public void OnBtnClick(View view) {
         switch (view.getId()) {
-            case R.id.tvConfirmDelivery:
-                tvPowerType.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
-                tvPowerType.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process, 0, 0, 0);
-                tvDelivery.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.light_green));
-                tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check, 0, 0, 0);
-                deliveryLyt.setVisibility(View.GONE);
-                tvConfirmDelivery.setVisibility(View.GONE);
-                powerTypeLyt.setVisibility(View.VISIBLE);
-                tvConfirmOrder.setVisibility(View.VISIBLE);
-                //todo here add the logic to power of lens
-                //todo price increment on lens
 
-                break;
             case R.id.tvConfirmOrder:
 
                 tvPayment.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
                 tvPayment.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process, 0, 0, 0);
-                tvPowerType.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.light_green));
-                tvPowerType.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check, 0, 0, 0);
+                tvDelivery.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.light_green));
+                tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check, 0, 0, 0);
+                deliveryLyt.setVisibility(View.GONE);
+                paymentLyt.setVisibility(View.VISIBLE);
                 tvConfirmOrder.setVisibility(View.GONE);
                 tvPlaceOrder.setVisibility(View.VISIBLE);
-                paymentLyt.setVisibility(View.VISIBLE);
-                powerTypeLyt.setVisibility(View.GONE);
-                if (ch999.isChecked())
-                {
-                lens_price=    ch999.getTag().toString().trim();
-                lens_name="single vision - Anti-Glare";
-                }
-                if (ch1399.isChecked())
-                {
-                    lens_price=    ch1399.getTag().toString().trim();
-                    lens_name="single vision - blue-block (computer Glasses)";
-                }
-                if (ch1199.isChecked())
-                {
-                    lens_price=    ch1199.getTag().toString().trim();
-                    lens_name="single vision - photo Chromics (anti glare)";
-                }
-                if (ch1299.isChecked())
-                {
-                    lens_price=    ch1299.getTag().toString().trim();
-                    lens_name="Bifocals - Anti-Glare";
-                }
-                if (ch1699.isChecked())
-                {
-                    lens_price=    ch1699.getTag().toString().trim();
-                    lens_name="Bifocals - blue-block (computer Glasses)";
-                }
-                if (ch1899.isChecked())
-                {
-                    lens_price=    ch1899.getTag().toString().trim();
-                    lens_name="Bifocals - photo Chromics (anti glare)";
-                }
-                if (ch1999.isChecked())
-                {
-                    lens_price=    ch1999.getTag().toString().trim();
-                    lens_name="Progressive - Anti-Glare";
-                }
-                if (ch2899.isChecked())
-                {
-                    lens_price=    ch2899.getTag().toString().trim();
-                    lens_name="Progressive - blue-block (computer Glasses)";
-                }
-                if (ch2699.isChecked())
-                {
-                    lens_price=    ch2699.getTag().toString().trim();
-                    lens_name="Progressive - photo Chromics (anti glare)";
-                }
-                //specs values
-                if (!chZero.isChecked())
-                {
-                  tRSPH=RSPH.getText().toString().trim();
-                     tRCYL= RCYL.getText().toString().trim();
-                   tRAXIS=RAXIS.getText().toString().trim();
-                  tRVA=RVA.getText().toString().trim();
-
-                 tLSPH=LSPH.getText().toString().trim();
-                   tLCYL=LCYL.getText().toString().trim();
-                     tLAXIS=LAXIS.getText().toString().trim();
-                  tLVA=LVA.getText().toString().trim();
-
-                    tintermediate=intermediate.getText().toString().trim();
-                    tadditional=additional.getText().toString().trim();
-
-                }
-
-                try {
-                    lens_val=Integer.parseInt(lens_price);
-                }catch (Exception e)
-                {
-                    lens_val=0;
-                }
-                SetDataTotal(lens_val);
+                SetDataTotal();
 
 
                 break;
@@ -701,8 +473,8 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
         sendparams.put(Constant.LONGITUDE, session.getCoordinates(Session.KEY_LONGITUDE));
         sendparams.put(Constant.LATITUDE, session.getCoordinates(Session.KEY_LATITUDE));
         sendparams.put(Constant.EMAIL, session.getData(Session.KEY_EMAIL));
-     sendparams.put("lens_prices",lens_price);//HERE
-        sendparams.put("lens_name",lens_name);//HERE
+     sendparams.put("lens_prices","100");//HERE
+        sendparams.put("lens_name","nil");//HERE
         sendparams.put("RSPH",tRSPH);//HERE
         sendparams.put("RCYL",tRCYL);//HERE
         sendparams.put("RAXIS",tRAXIS);//HERE
@@ -987,7 +759,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
             isApplied = false;
             appliedCode = "";
             pCode = "";
-            SetDataTotal(0);
+            SetDataTotal();
 
         }
     }
@@ -1004,7 +776,7 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
                     Toast.makeText(getApplicationContext(), getString(R.string.promo_code_already_applied), Toast.LENGTH_SHORT).show();
                 } else {
                     if (isApplied && !promoCode.equals(appliedCode)) {
-                        SetDataTotal(0);
+                        SetDataTotal();
                     }
                     tvAlert.setVisibility(View.GONE);
                     btnApply.setVisibility(View.INVISIBLE);
@@ -1125,19 +897,6 @@ public class CheckoutActivity extends AppCompatActivity implements OnMapReadyCal
 
     @Override
     public void onBackPressed() {
-
-        if (paymentLyt.getVisibility() == View.VISIBLE) {
-            walletUncheck();
-            tvPayment.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.gray));
-            tvPayment.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process_gray, 0, 0, 0);
-            tvDelivery.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorPrimary));
-            tvDelivery.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_next_process, 0, 0, 0);
-            tvConfirmOrder.setVisibility(View.VISIBLE);
-            tvPlaceOrder.setVisibility(View.GONE);
-            paymentLyt.setVisibility(View.GONE);
-            deliveryLyt.setVisibility(View.VISIBLE);
-        } else
-            super.onBackPressed();
     }
 
     public void getWalletBalance() {

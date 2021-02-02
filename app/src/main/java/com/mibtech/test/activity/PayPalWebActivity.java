@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 
 import android.app.AlertDialog;
@@ -23,10 +23,10 @@ import org.json.JSONObject;
 
 import java.util.Map;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.helper.AppController;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.PaymentModelClass;
+import com.mibtech.test.R;
+import com.mibtech.test.helper.AppController;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.PaymentModelClass;
 
 public class PayPalWebActivity extends AppCompatActivity {
 

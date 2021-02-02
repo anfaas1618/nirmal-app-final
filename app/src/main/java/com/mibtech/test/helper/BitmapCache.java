@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 import android.graphics.Bitmap;
 import android.util.LruCache;

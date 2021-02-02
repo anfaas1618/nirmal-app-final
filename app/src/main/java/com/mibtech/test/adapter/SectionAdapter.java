@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,10 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
-import com.mibtech.optical.activity.ProductListActivity;
-import com.mibtech.optical.model.Category;
+import com.mibtech.test.activity.ProductListActivity;
+import com.mibtech.test.model.Category;
 
 
 public class SectionAdapter extends RecyclerView.Adapter<SectionAdapter.SectionHolder> {

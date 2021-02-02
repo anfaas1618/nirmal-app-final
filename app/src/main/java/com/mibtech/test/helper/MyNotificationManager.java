@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 
 import android.app.Notification;
@@ -17,7 +17,7 @@ import android.text.Html;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
 import java.io.IOException;
 import java.io.InputStream;

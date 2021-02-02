@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,11 +15,11 @@ import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.ArrayList;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.ProductDetailActivity;
-import com.mibtech.optical.helper.AppController;
-import com.mibtech.optical.model.PriceVariation;
-import com.mibtech.optical.model.Product;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.ProductDetailActivity;
+import com.mibtech.test.helper.AppController;
+import com.mibtech.test.model.PriceVariation;
+import com.mibtech.test.model.Product;
 
 /**
  * Created by shree1 on 3/16/2017.

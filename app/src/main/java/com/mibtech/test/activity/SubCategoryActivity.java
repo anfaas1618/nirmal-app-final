@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -18,12 +18,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.CategoryAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.Category;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.CategoryAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.Category;
 
 
 public class SubCategoryActivity extends AppCompatActivity {

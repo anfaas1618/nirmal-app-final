@@ -1,4 +1,4 @@
-package com.mibtech.optical.model;
+package com.mibtech.test.model;
 
 
 public class City {

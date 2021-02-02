@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,10 +14,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.TrackerDetailActivity;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.model.OrderTracker;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.TrackerDetailActivity;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.model.OrderTracker;
 
 import java.util.ArrayList;
 

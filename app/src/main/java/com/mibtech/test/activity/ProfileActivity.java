@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatSpinner;
@@ -25,14 +25,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.AppController;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.Session;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.City;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.AppController;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.Session;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.City;
 
 import org.json.JSONArray;
 import org.json.JSONException;

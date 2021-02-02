@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 
 import android.app.Activity;
@@ -21,13 +21,13 @@ import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.ProductDetailActivity;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.DatabaseHelper;
-import com.mibtech.optical.model.PriceVariation;
-import com.mibtech.optical.model.Product;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.ProductDetailActivity;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.DatabaseHelper;
+import com.mibtech.test.model.PriceVariation;
+import com.mibtech.test.model.Product;
 
 import java.util.ArrayList;
 

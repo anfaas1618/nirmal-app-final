@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -34,19 +34,19 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.CategoryAdapter;
-import com.mibtech.optical.adapter.OfferAdapter;
-import com.mibtech.optical.adapter.SectionAdapter;
-import com.mibtech.optical.adapter.SliderAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.AppController;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.DatabaseHelper;
-import com.mibtech.optical.helper.Session;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.Category;
-import com.mibtech.optical.model.Slider;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.CategoryAdapter;
+import com.mibtech.test.adapter.OfferAdapter;
+import com.mibtech.test.adapter.SectionAdapter;
+import com.mibtech.test.adapter.SliderAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.AppController;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.DatabaseHelper;
+import com.mibtech.test.helper.Session;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.Category;
+import com.mibtech.test.model.Slider;
 
 public class MainActivity extends DrawerActivity {
     boolean doubleBackToExitPressedOnce = false;

@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
 public class ProductHolder extends RecyclerView.ViewHolder {
     TextView productName, productPrice, txtqty, Measurement, showDiscount, originalPrice, txtstatus, imgarrow;

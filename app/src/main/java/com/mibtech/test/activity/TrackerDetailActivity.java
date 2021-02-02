@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,14 +19,14 @@ import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
-import com.mibtech.optical.adapter.ItemsAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.Session;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.OrderTracker;
+import com.mibtech.test.adapter.ItemsAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.Session;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.OrderTracker;
 
 import org.json.JSONException;
 import org.json.JSONObject;

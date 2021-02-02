@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 
 import android.os.Bundle;
@@ -14,9 +14,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.CategoryAdapter;
-import com.mibtech.optical.helper.Constant;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.CategoryAdapter;
+import com.mibtech.test.helper.Constant;
 
 public class CategoryActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 
 import android.content.DialogInterface;
@@ -28,14 +28,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.ProductLoadMoreAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.AppController;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.DatabaseHelper;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.Product;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.ProductLoadMoreAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.AppController;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.DatabaseHelper;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.Product;
 
 public class ProductListActivity extends AppCompatActivity {
 

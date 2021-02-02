@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -13,9 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.appcompat.widget.Toolbar;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.Session;
+import com.mibtech.test.R;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.Session;
 
 public class ReferEarnActivity extends AppCompatActivity {
 

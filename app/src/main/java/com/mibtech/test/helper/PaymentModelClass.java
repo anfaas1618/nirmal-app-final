@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 
 import android.app.Activity;
@@ -25,9 +25,9 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.CheckoutActivity;
-import com.mibtech.optical.activity.OrderPlacedActivity;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.CheckoutActivity;
+import com.mibtech.test.activity.OrderPlacedActivity;
 
 public class PaymentModelClass {
     public Activity activity;

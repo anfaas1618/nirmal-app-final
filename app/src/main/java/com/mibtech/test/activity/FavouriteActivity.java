@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,13 +13,13 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.ProductAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.DatabaseHelper;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.Product;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.ProductAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.DatabaseHelper;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.Product;
 
 import org.json.JSONArray;
 import org.json.JSONException;

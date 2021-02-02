@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
-import com.mibtech.optical.helper.DatabaseHelper;
+import com.mibtech.test.helper.DatabaseHelper;
 
 public class OrderPlacedActivity extends AppCompatActivity {
 

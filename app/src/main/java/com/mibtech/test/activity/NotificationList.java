@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -21,12 +21,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.adapter.NotificationAdapter;
-import com.mibtech.optical.helper.ApiConfig;
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.VolleyCallback;
-import com.mibtech.optical.model.Notification;
+import com.mibtech.test.R;
+import com.mibtech.test.adapter.NotificationAdapter;
+import com.mibtech.test.helper.ApiConfig;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.VolleyCallback;
+import com.mibtech.test.model.Notification;
 
 public class NotificationList extends AppCompatActivity {
 

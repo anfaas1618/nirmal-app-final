@@ -1,11 +1,11 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.mibtech.optical.activity.MainActivity;
+import com.mibtech.test.activity.MainActivity;
 
 
 public class Session {

@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.mibtech.optical.ui.CircleImageView
+        <com.mibtech.test.ui.CircleImageView
             android:id="@+id/imgcategory"
             android:layout_width="70dp"
             android:layout_height="70dp"

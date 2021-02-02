@@ -1,4 +1,4 @@
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 public interface VolleyCallback {
     void onSuccess(boolean result, String message);

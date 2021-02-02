@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.mibtech.optical.helper;
+package com.mibtech.test.helper;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -48,7 +48,7 @@ import androidx.appcompat.widget.AppCompatEditText;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.ViewCompat;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
 public class PinView extends AppCompatEditText {
 

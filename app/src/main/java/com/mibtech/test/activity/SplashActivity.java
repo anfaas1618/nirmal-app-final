@@ -1,4 +1,4 @@
-package com.mibtech.optical.activity;
+package com.mibtech.test.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,10 +12,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.mibtech.optical.R;
+import com.mibtech.test.R;
 
-import com.mibtech.optical.helper.Constant;
-import com.mibtech.optical.helper.Session;
+import com.mibtech.test.helper.Constant;
+import com.mibtech.test.helper.Session;
 
 public class SplashActivity extends AppCompatActivity {
 

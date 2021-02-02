@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -16,10 +16,10 @@ import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.ArrayList;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.activity.ProductDetailActivity;
-import com.mibtech.optical.helper.AppController;
-import com.mibtech.optical.model.Product;
+import com.mibtech.test.R;
+import com.mibtech.test.activity.ProductDetailActivity;
+import com.mibtech.test.helper.AppController;
+import com.mibtech.test.model.Product;
 
 
 /**

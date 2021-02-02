@@ -1,4 +1,4 @@
-package com.mibtech.optical.adapter;
+package com.mibtech.test.adapter;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import com.android.volley.toolbox.NetworkImageView;
 
 import java.util.ArrayList;
 
-import com.mibtech.optical.R;
-import com.mibtech.optical.helper.Constant;
+import com.mibtech.test.R;
+import com.mibtech.test.helper.Constant;
 
 public class OfferAdapter extends RecyclerView.Adapter<OfferAdapter.ViewHolder> {
     public ArrayList<String> offerlist;
