@@ -1,34 +1,78 @@
 {
   "project_info": {
-    "project_number": "608525595870",
-    "firebase_url": "https://optical-storm.firebaseio.com",
-    "project_id": "optical-storm",
-    "storage_bucket": "optical-storm.appspot.com"
+    "project_number": "538128227754",
+    "project_id": "fir-ab075",
+    "storage_bucket": "fir-ab075.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:608525595870:android:b11100668a8e8a109c3e4f",
+        "mobilesdk_app_id": "1:538128227754:android:14034a316a1029de035fd3",
         "android_client_info": {
-          "package_name": "com.mibtech.optical"
+          "package_name": "com.mibtech.test"
         }
       },
       "oauth_client": [
         {
-          "client_id": "608525595870-8fmh4ogr81jvkqk91s3bubbm375nc3bq.apps.googleusercontent.com",
+          "client_id": "538128227754-m48jj1oc2lbilkmeeog1315a138dk4qs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mibtech.test",
+            "certificate_hash": "e8c284a209b8996e47702dbec1d864557949459a"
+          }
+        },
+        {
+          "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB89zvyeB07k7SaKNfJlXX7ml9fs8KCY14"
+          "current_key": "AIzaSyCYJAZTVdN4x0DnqrI95Quil1BFqjuELKg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "608525595870-8fmh4ogr81jvkqk91s3bubbm375nc3bq.apps.googleusercontent.com",
+              "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538128227754:android:2f0e8e01ddf3dff3035fd3",
+        "android_client_info": {
+          "package_name": "com.mibtech.testdelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538128227754-1k46c27jnqda1bq70b9oshpulqict5u4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mibtech.testdelivery",
+            "certificate_hash": "e8c284a209b8996e47702dbec1d864557949459a"
+          }
+        },
+        {
+          "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYJAZTVdN4x0DnqrI95Quil1BFqjuELKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
