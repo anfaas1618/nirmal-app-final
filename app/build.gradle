@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.mibtech.test"
+        applicationId "com.mibtech.nirmalBakery"
         minSdkVersion 20
         targetSdkVersion 30
         versionCode 1

@@ -453,7 +453,7 @@
                         android:text="@string/please_type_verification_code_sent_to"
                         android:textColor="@color/colorPrimary" />
 
-                    <com.mibtech.test.helper.PinView
+                    <com.mibtech.nirmalBakery.helper.PinView
                         android:id="@+id/edtotp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

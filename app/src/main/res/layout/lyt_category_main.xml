@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
 
-        <com.mibtech.test.ui.CircleImageView
+        <com.mibtech.nirmalBakery.ui.CircleImageView
             android:id="@+id/imgcategory"
             android:layout_width="100dp"
             android:layout_height="100dp"

@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "538128227754",
-    "project_id": "fir-ab075",
-    "storage_bucket": "fir-ab075.appspot.com"
+    "project_number": "89705736913",
+    "project_id": "nirmal-bakery-575cd",
+    "storage_bucket": "nirmal-bakery-575cd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:538128227754:android:14034a316a1029de035fd3",
+        "mobilesdk_app_id": "1:89705736913:android:16cb63ca372e94872673f0",
         "android_client_info": {
-          "package_name": "com.mibtech.test"
+          "package_name": "com.mibtech.nirmalBakery"
         }
       },
       "oauth_client": [
         {
-          "client_id": "538128227754-m48jj1oc2lbilkmeeog1315a138dk4qs.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.mibtech.test",
-            "certificate_hash": "e8c284a209b8996e47702dbec1d864557949459a"
-          }
-        },
-        {
-          "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
+          "client_id": "89705736913-8uhv9sslr82oh6vvforj99lfv4lgl83p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCYJAZTVdN4x0DnqrI95Quil1BFqjuELKg"
+          "current_key": "AIzaSyBv4cSoTLLFyo2aSaN_J3UAcWAA2OkcAXQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
+              "client_id": "89705736913-8uhv9sslr82oh6vvforj99lfv4lgl83p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -44,35 +36,35 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:538128227754:android:2f0e8e01ddf3dff3035fd3",
+        "mobilesdk_app_id": "1:89705736913:android:eb655edfc4118c8f2673f0",
         "android_client_info": {
-          "package_name": "com.mibtech.testdelivery"
+          "package_name": "com.mibtech.nirmalDelivery"
         }
       },
       "oauth_client": [
         {
-          "client_id": "538128227754-1k46c27jnqda1bq70b9oshpulqict5u4.apps.googleusercontent.com",
+          "client_id": "89705736913-cj67qi85rtql84kb6vf0259ubrboivan.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mibtech.testdelivery",
+            "package_name": "com.mibtech.nirmalDelivery",
             "certificate_hash": "e8c284a209b8996e47702dbec1d864557949459a"
           }
         },
         {
-          "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
+          "client_id": "89705736913-8uhv9sslr82oh6vvforj99lfv4lgl83p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCYJAZTVdN4x0DnqrI95Quil1BFqjuELKg"
+          "current_key": "AIzaSyBv4cSoTLLFyo2aSaN_J3UAcWAA2OkcAXQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "538128227754-5k927vdk9n11eltm431rkrobv7ibsgd9.apps.googleusercontent.com",
+              "client_id": "89705736913-8uhv9sslr82oh6vvforj99lfv4lgl83p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

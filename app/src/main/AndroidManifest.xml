@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mibtech.test">
+    package="com.mibtech.nirmalBakery">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="com.mibtech.test.helper.AppController"
+        android:name="com.mibtech.nirmalBakery.helper.AppController"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -18,26 +18,26 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic,android:allowBackup">
-        <activity android:name="com.mibtech.test.activity.NotificationList" />
-        <activity android:name="com.mibtech.test.activity.DrawerActivity" />
-        <activity android:name="com.mibtech.test.activity.WebViewActivity" />
-        <activity android:name="com.mibtech.test.activity.MapActivity" />
-        <activity android:name="com.mibtech.test.activity.OrderListActivity" />
-        <activity android:name="com.mibtech.test.activity.TrackerDetailActivity" />
-        <activity android:name="com.mibtech.test.activity.OrderPlacedActivity" />
-        <activity android:name="com.mibtech.test.activity.CheckoutActivity" />
-        <activity android:name="com.mibtech.test.activity.FullScreenViewActivity" />
-        <activity android:name="com.mibtech.test.activity.ProductDetailActivity">
+        <activity android:name="com.mibtech.nirmalBakery.activity.NotificationList" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.DrawerActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.WebViewActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.MapActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.OrderListActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.TrackerDetailActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.OrderPlacedActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.CheckoutActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.FullScreenViewActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.ProductDetailActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mibtech.test.activity.SplashActivity" />
+                android:value="com.mibtech.nirmalBakery.activity.SplashActivity" />
         </activity>
         <activity
-            android:name="com.mibtech.test.activity.SearchActivity"
+            android:name="com.mibtech.nirmalBakery.activity.SearchActivity"
             android:launchMode="singleTop" />
-        <activity android:name="com.mibtech.test.activity.ProfileActivity" />
-        <activity android:name="com.mibtech.test.activity.LoginActivity" />
-        <activity android:name="com.mibtech.test.activity.SplashActivity">
+        <activity android:name="com.mibtech.nirmalBakery.activity.ProfileActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.LoginActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,23 +52,23 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="mibtechnologies.in/test"
+                    android:host="mibtechnologies.in/nirmal"
                     android:pathPrefix="/refer"
                     android:scheme="https" />
                 <data
-                    android:host="mibtechnologies.in/test"
+                    android:host="mibtechnologies.in/nirmal"
                     android:pathPrefix="/itemdetail"
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mibtech.test.activity.MainActivity" />
-        <activity android:name="com.mibtech.test.activity.ReferEarnActivity" />
-        <activity android:name="com.mibtech.test.activity.SubCategoryActivity" />
-        <activity android:name="com.mibtech.test.activity.FavouriteActivity" />
-        <activity android:name="com.mibtech.test.activity.CartActivity" />
-        <activity android:name="com.mibtech.test.activity.ProductListActivity" />
-        <activity android:name="com.mibtech.test.activity.CategoryActivity" />
-        <activity android:name="com.mibtech.test.activity.PayPalWebActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.MainActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.ReferEarnActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.SubCategoryActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.FavouriteActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.CartActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.ProductListActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.CategoryActivity" />
+        <activity android:name="com.mibtech.nirmalBakery.activity.PayPalWebActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -80,12 +80,12 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <service android:name="com.mibtech.test.helper.MyFirebaseMessagingService">
+        <service android:name="com.mibtech.nirmalBakery.helper.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name="com.mibtech.test.helper.GPSTracker" />
+        <service android:name="com.mibtech.nirmalBakery.helper.GPSTracker" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
